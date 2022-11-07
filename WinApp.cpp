@@ -20,7 +20,7 @@ void WinApp::Initialize()
 	//ウインドウクラスの設定
 	w.cbSize = sizeof(WNDCLASSEX);
 	w.lpfnWndProc = (WNDPROC)WindowProc;//ウインドウプロ―ジャーの設定
-	w.lpszClassName = L"name";//ウインドウクラス名
+	w.lpszClassName = L"DirectXGame";//ウインドウクラス名
 	w.hInstance = GetModuleHandle(nullptr);//ウインドウハンドル
 	w.hCursor = LoadCursor(NULL, IDC_ARROW);//カーソル指定
 
@@ -33,7 +33,7 @@ void WinApp::Initialize()
 
 	//ウインドウオブジェクトの生成
 	hwnd = CreateWindow(w.lpszClassName,//クラス名
-		L"LE2B_カミサトマサトシ",//タイトルバーの文字
+		L"DirectXGame",//タイトルバーの文字
 		WS_OVERLAPPEDWINDOW,//標準的なウインドウスタイル
 		CW_USEDEFAULT,//表示X座標（OSに任せる）
 		CW_USEDEFAULT,//表示Y座標（OSに任せる）
