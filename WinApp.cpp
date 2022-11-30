@@ -1,4 +1,5 @@
 #include "WinApp.h"
+#pragma comment(lib,"winmm.lib")
 
 //ウィンドウプロージャー
 LRESULT WinApp::WindowProc(HWND hwnd, UINT msg, WPARAM wapram, LPARAM lparam) {
@@ -46,6 +47,9 @@ void WinApp::Initialize()
 
 	//ウインドウを表示状態にする
 	ShowWindow(hwnd, SW_SHOW);
+
+	//システムタイマーの分解能を上げる
+	timeBeginPeriod(1);
 }
 
 void WinApp::Finalize()
